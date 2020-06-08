@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            border: 1px solid black;
+            background-color: cyan;
+            padding: 8px 16px;
+        }
+
+        input {
+            border: 1px solid black;
+            background-color: cyan;
+            padding: 8px 16px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <h1>DashBoard For Admin</h1>
+    <a href="/admin/dashboard/newPatient">Add New Patient</a>
+    <br> <br> <br> <br> <br>
+    <a href="/admin/dashboard/viewAllPatients">View All Patients</a>
+    <br> <br> <br>
+    <form action="/logout" method="post">
+        <input type="submit" value="Logout">
+    </form>
+</body>
+
+</html>

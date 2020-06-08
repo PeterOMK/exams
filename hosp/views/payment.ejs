@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        form {
+            position: absolute;
+            left: 50%;
+            width: 100%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add padding to containers */
+        .container {
+            padding: 16px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=date],
+        input[type=password],
+        input[type=Number] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Overwrite default styles of hr */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* Set a style for the submit button */
+        .registerbtn {
+            background-color: skyblue;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .registerbtn:hover {
+            opacity: 1;
+        }
+
+        /* Add a blue text color to links */
+        a {
+            color: dodgerblue;
+        }
+
+        /* Set a grey background color and center the text of the "sign in" section */
+        .signin {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/admin/dashboard/payment" method="post">
+        <div class="container">
+            <h1>Make Payment</h1>
+            <input type="text" placeholder="Enter Full Name" name="fullName" required>
+            <input type="date" placeholder="Enter Payment Date" name="paymentDate" required>
+            <input type="Number" placeholder="Amount Paid" name="amount" required>
+            <input type="Number" placeholder=" Enter Balance" name="balance" required>
+            <hr>
+            <button type="submit" class="registerbtn">Make Payment</button>
+        </div>
+
+        <div class="container signin">
+            <a href="/admin/dashboard/newPatient">Back</a>
+        </div>
+    </form>
+</body>
+
+</html>
